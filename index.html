@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Text Extraction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('p/Users/hey/Desktop/ss/templates/PHOTO-2023-08-05-02-16-04.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(0, 128, 0, 0.5); /* Brighter green with some transparency */
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="file"] {
+            display: none; /* Hide the file input */
+        }
+
+        label {
+            padding: 10px 20px;
+            background-color: #4caf50; /* Green button color */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        label:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4caf50; /* Green button color */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Upload a PDF file:</h1>
+    </header>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Choose File</label>
+        <input type="file" id="file" name="file" accept=".pdf" required>
+        <button type="submit">Start</button>
+    </form>
+</body>
+
+</html>
